@@ -1,7 +1,9 @@
 package com.agartime.utad;
 
 import org.apache.hadoop.util.ProgramDriver;
+
 import com.agartime.utad.histogram.HistogramFlow;
+import com.agartime.utad.friendrecommender.friendrecommenderjob;
 import com.agartime.utad.friendsofmyfriends.FriendsOfMyFriendsJob;
 
 /**
@@ -13,7 +15,7 @@ public class Driver  extends ProgramDriver {
         super();
         addClass("histogram", HistogramFlow.class, "Creates the histogram");
         addClass("friends", FriendsOfMyFriendsJob.class, "Gets the friends of my friends");
-        addClass("friendrecommended", friendrecommenderjob.class, "Gets recommended friends");
+        addClass("friendrecommender", friendrecommenderjob.class, "Gets recommended friends");
     }
 
     public static void main(String[] args) throws Throwable {
